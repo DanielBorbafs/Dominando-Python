@@ -1,7 +1,7 @@
 
 # Coletando dados do USUÁRIO
 
-# ESTÀGIO 1 - COLETANDO DADOS
+# ESTÁGIO 1 - COLETANDO DADOS
 ### EXEMPLO ANTIGO DO PYTHON####
 print("QUAL É O SEU NOME?")
 
@@ -9,7 +9,7 @@ print("QUAL É O SEU NOME?")
 nome = input() #ENTRADA DE DADOS
 
 
-# ESTÀGIO 2 - RESPOSTA DO ESTAGIO1
+# ESTÁGIO 2 - RESPOSTA DO ESTAGIO1
 
 
 print('Seja bem vindo (a) %s' %nome)
