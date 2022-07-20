@@ -1,0 +1,33 @@
+"""
+REVERSED
+
+OBS: Não confundir com a função reverse de listas.
+
+sua função é inverter o iterável
+"""
+
+# Exemplos
+
+lista = [1, 2, 3, 4, 5]
+
+res = reversed(lista)
+
+print(res)
+print(type(res))
+
+print(list(reversed(lista)))
+
+# ITerar sobre o reversed
+
+for letra in reversed('Geek University'):
+    print(letra, end='')
+print('\n')
+
+
+# Podemos fazer o mesmo sem uso de for
+print(''.join(list(reversed('Geek University'))))
+
+# UTILIZANDO REVERSED EM LOOP FOR REVERSO
+
+for n in reversed(range(0, 10)):
+    print(n)
