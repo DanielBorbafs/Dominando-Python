@@ -1,0 +1,71 @@
+"""
+Debuggando com PDB
+PDB > Python Debugger
+
+"""
+
+
+def dividir(a, b):
+    try:
+        return int(a) / int(b)
+    except (ValueError, ZeroDivisionError) as err:
+        return f' ocorreu um problema : {err}'
+
+
+print(dividir(4, 7))
+
+# Utilizando o pycharm é só clilar no inseto ou selecionar o debug com o botao direito do mouse
+
+
+# Com Python debugger
+# FORMATO 1
+import pdb
+
+# Comandos Básicos do PDB
+# l (listar onde estamos no código)
+# n (próxima linha)
+# p (imprime variável)
+# c (continua a execução . finaliza o debugging)
+
+nome = 'Daniel'
+idade = '22'
+sobrenome = 'Borba'
+curso = 'Python AVANÇADO'
+pdb.set_trace()
+nome_completo = nome + ' ' + sobrenome
+final = nome_completo + 'faz curso' + curso
+
+
+# FORMATO 2
+
+
+nome = 'Daniel'
+idade = '22'
+sobrenome = 'Borba'
+curso = 'Python AVANÇADO'
+import pdb; pdb.set_trace()
+nome_completo = nome + ' ' + sobrenome
+final = nome_completo + 'faz curso' + curso
+
+# Colocar só onde vai debuggar, e ao finalizar fazer a remoção da linha.
+
+
+# FORMATO 3
+# a partir do python 3.7 nao precisa importar o pdb, pois ele ja foi incorporado
+# Agora se chama breakpoint()
+
+nome = 'Daniel'
+idade = '22'
+sobrenome = 'Borba'
+breakpoint()
+curso = 'Python AVANÇADO'
+import pdb; pdb.set_trace()
+nome_completo = nome + ' ' + sobrenome
+final = nome_completo + 'faz curso' + curso
+
+
+def soma(l, n, p, c):
+    breakpoint()
+    return l + n + p + c
+
+print(soma(1, 3, 5, 7))
