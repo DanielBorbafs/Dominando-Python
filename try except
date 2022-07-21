@@ -1,0 +1,42 @@
+"""
+O block try/except
+
+utilizamos o bloco try/except para tratar erros que podem ocorrer no nosso código
+assim que o programa pare de funcionar e o usuário recebe mensagens de erro inesperadas
+
+try:
+    //execução problemática
+except:
+    // o que deve ser feito em caso de problema
+"""
+
+# exemplo 1 - tratando um erro genérico
+
+try:
+    geek()
+except:
+    print('Deu algum problema')
+
+# tente executar a funçãp, caso encontre erro. imprima com o erro.
+
+# exemplo 2 - Tratando erro específico
+
+try:
+    geek()
+except NameError:
+    print('Voce esta utilizando uma função inexistente')
+
+
+try:
+    len(5)
+except TypeError as err:
+    print(f'A aplicação gerou o seguinte erro{err}')
+# IMPRIMINDO ERRO COM MAIS DETALHES
+
+try:
+    geek()
+except NameError as erra:
+    print(f'Deu NameError: {erra}')
+except TypeError as errb:
+    print(f'Deu TypeError: {errb}')
+
