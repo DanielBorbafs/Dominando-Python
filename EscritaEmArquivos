@@ -1,0 +1,33 @@
+"""
+Escrevendo em arquivos
+
+#OBS: Se abrirmos um arquivo para escrita. não podemos apenas lê-lo
+teremos que escrever nele
+
+"""
+
+"""
+O with é utilizado para criar um contexto de trabalho onde os recursos utilizados são fechados após o bloco with
+Para escrevermos dados em um arquivo, após abrir o arquivo utilizamos a função write()
+PRECISA SER STRING
+"""
+# Exemplo de escrita - modo 'w' - write (escrita)
+
+#with open ('novo.txt', 'w', encoding='utf-8') as arquivo:
+    #arquivo.write('Novos dados tabom\n')
+    #arquivo.write('vamos testar\n')
+   # arquivo.write('sim, o conteúdo some após reescrevermos outras coisas')
+
+# Se o arquivo não existir será criado, caso ele ja exista, o anterior será apagado e um novo será criado.
+
+#with open('geek.txt', 'w') as arquivo:
+   # arquivo.write('Geek \n' * 10)
+
+with open('frutas.txt','w') as arquivo:
+    while True:
+        fruta = input('informe uma fruta ou digite sair:')
+        if fruta != 'sair':
+            arquivo.write(fruta)
+            arquivo.write('\n')
+        else:
+            break
