@@ -1,0 +1,28 @@
+from map import cidades, c_para_f
+
+print(list(map(c_para_f, cidades)))
+
+
+# puxando funções e dados de outros arquivos na mesma pasta
+
+"Módulos Externos"
+
+" Utilizamos o gerenciador de pacotes Python, chamado pip, python installer, package"
+
+' para conhecer os pacotes externos oficiais, temos que acessar : https://pypi,org'
+
+
+from colorama import init
+
+
+from colorama import Fore, Back, Style
+
+
+print(Fore.LIGHTGREEN_EX + 'Teste')
+
+
+
+import pydf
+pdf = pydf.generate_pdf('<h1>this is html</h1>')
+with open('test_doc.pdf', 'wb') as f:
+    f.write(pdf)
