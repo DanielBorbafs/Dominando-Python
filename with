@@ -1,0 +1,9 @@
+"""
+O with é utilizado para criar um contexto de trabalho onde os recursos utilizados são fechados após o bloco with
+
+"""
+with open ('texto.txt', 'r', encoding='utf-8') as arquivo:
+    print(arquivo.readlines())
+
+
+# é a forma pythonica de manipular arquvos
