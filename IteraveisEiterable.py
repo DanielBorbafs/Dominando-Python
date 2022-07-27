@@ -50,3 +50,47 @@ def meu_for(interavel):
 numero = range(20)
 
 meu_for(numero)
+
+numero = range(20)
+
+meu_for(numero)
+
+print('\n')
+
+
+# Escrevendo um iterador Customizado
+
+for n in range(2, 11):
+    print(n)
+print('\n')
+
+
+# SELF SEMPRE APARECE QUANDO UMA FUNÇÃO ESTÁ DENTRO DE UMA CLASSE
+class Contador:
+    def __init__(self, menor, maior):
+        self.menor = menor
+        self.maior = maior
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.menor < self.maior:
+            numero = self.menor
+            self.menor = self.menor + 1
+            return numero
+        raise StopIteration
+
+
+con = Contador(2, 10)
+
+it = iter(con)
+
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+
+# Refatorar
+for n in Contador(2, 10):
+    print(f'{n}')
