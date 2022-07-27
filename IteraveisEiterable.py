@@ -27,3 +27,26 @@ nome = 'Geek'
 
 for letra in nome:
     print(f'{letra}')
+
+# Criando versão de LOOP
+
+for num in [1, 2, 3, 4, 5]:
+    print(num)
+
+print('\n')
+
+for letra in 'Daniel Borba':
+    print(letra)
+
+def meu_for(interavel):
+    it = iter(interavel)
+    while True:
+        try:
+            print(next(it))
+        except StopIteration:
+            break
+
+
+numero = range(20)
+
+meu_for(numero)
